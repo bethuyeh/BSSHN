@@ -1,12 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Payment from './components/Payment';
+import Booking from './components/Booking';
+import App from './components/Registration';
+import VitalSigns from './components/VitalSigns';
+import Consultation from './components/Consultation';
+import Admission from './components/Admission';
+import DispenseDrugs from './components/DispenseDrugs';
+import Emergency from './components/EmergencyICU';
+import Diagnostics from './components/Diagnostics';
+import WalkIns from './components/WalkIn';
 import reportWebVitals from './reportWebVitals';
+
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    <Payment/>
+    <Booking/>
+    <VitalSigns/>
+    <Consultation/>
+    <Admission/>
+    <DispenseDrugs/>
+    <Emergency/>
+    <Diagnostics/>
+    <WalkIns/>
+    
   </React.StrictMode>,
   document.getElementById('root')
 );
