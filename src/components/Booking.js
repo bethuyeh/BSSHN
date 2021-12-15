@@ -1,7 +1,8 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './Registration.css'
 
 const Booking = () => {
+  const [show, setShow] = useState(false)
     return (
         <body>
             <div className="container">
@@ -11,13 +12,16 @@ const Booking = () => {
         <div className="user-details">
           <div className="input-box">
             <span className="details">Phone/Patient No. or Surname</span>
-            <input type="text" placeholder="Enter appropriate detail" required/>
+            <input type="text" placeholder="Enter appropriate detail" required onClick={()=>setShow(!show)}/>
           </div>
 
+              {
+                show? 
           <div className="input-box">
             <span className="details">Queue for In-patient Services</span>
             <input type="text" placeholder="Enter queue number" required/>
-          </div>
+          </div> : null
+        }
     </div>
 
           <div className="button">

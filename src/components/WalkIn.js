@@ -1,7 +1,8 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './Registration.css'
 
 const WalkIns = () => {
+  const [show, setShow] = useState(false)
     return (
         <body>
             <div className="container">
@@ -11,8 +12,12 @@ const WalkIns = () => {
         <div className="user-details">
           <div className="input-box">
             <span className="details">Phone/Patient No. or Surname</span>
-            <input type="text" placeholder="Enter appropriate detail" required/>
+            <input type="text" placeholder="Enter appropriate detail" onClick={()=> setShow(!show)} required/>
           </div>
+          </div>
+
+        {show ?
+        <div className="user-details">
 
           <div className="input-box">
             <span className="details">Investigation</span>
@@ -34,6 +39,7 @@ const WalkIns = () => {
             <input type="text" placeholder="" required />
           </div>
     </div>
+    :null }
         
         <div className="button">
           <input type="submit" value="Enter"/>

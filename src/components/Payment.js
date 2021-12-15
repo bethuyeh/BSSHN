@@ -1,7 +1,8 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './Registration.css'
 
 const Payment = () => {
+  const [show, setShow] = useState(false)
     return (
     <body>
       <div className="container">
@@ -11,8 +12,12 @@ const Payment = () => {
         <div className="user-details">
           <div className="input-box">
             <span className="details">Phone/Patient No. or Surname</span>
-            <input type="text" placeholder="Enter appropriate detail" required/>
+            <input type="text" placeholder="Enter appropriate detail" required onClick={()=>setShow(!show)}/>
           </div>
+          </div>
+
+        {show ?
+        <div className="user-details">
 
             <div className="input-box">
             <span className="details">Select Service type being paid for</span>
@@ -45,6 +50,8 @@ const Payment = () => {
             <input type="text"  required/>
           </div> 
         </div>
+        :null
+        }
         
         <div className="button">
           <input type="submit" value="Paid"/>

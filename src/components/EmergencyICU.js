@@ -2,12 +2,13 @@ import React from 'react'
 import './Registration.css'
 
 const Emergency = () => {
+ 
   return (
     <body>
       
       
       <div className="container">
-    <div className="title">Registration</div>
+    <div className="title">Emergency/ICU</div>
     <div className="content">
       <form action="#">
         <div className="user-details">

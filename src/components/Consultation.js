@@ -1,7 +1,8 @@
-import React from 'react'
+import React, {useState}from 'react'
 import './Registration.css'
 
 const Consultation = () => {
+  const [show, setShow] = useState(false)
     return (
         <body>
             <div className="container">
@@ -11,9 +12,12 @@ const Consultation = () => {
         <div className="user-details">
           <div className="input-box">
             <span className="details">Phone/Patient No. or Surname</span>
-            <input type="text" placeholder="Enter appropriate detail" required/>
+            <input type="text" placeholder="Enter appropriate detail" onClick={()=>setShow(!show)} required />
+          </div>
           </div>
 
+          {show ?
+          <div className="user-details">
           <div className="input-box">
             <span className="details">Diagnosis</span>
             <input type="text" placeholder="Enter Patient Diagnosis" required/>
@@ -52,9 +56,10 @@ const Consultation = () => {
           <div className="input-box">
             <span className="details">Notes</span>
             <input type="text" placeholder="" required />
-          </div>
-          
+          </div>    
         </div>
+        : null
+        }
         
         <div className="button">
           <input type="submit" value="Submit"/>

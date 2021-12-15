@@ -12,6 +12,7 @@ import Emergency from './components/EmergencyICU';
 import Diagnostics from './components/Diagnostics';
 import WalkIns from './components/WalkIn';
 import reportWebVitals from './reportWebVitals';
+import RecurrentEntries from './components/RecurrentEntries';
 
 
 ReactDOM.render(
@@ -25,7 +26,8 @@ ReactDOM.render(
     <DispenseDrugs/>
     <Emergency/>
     <Diagnostics/>
-    <WalkIns/>
+    <RecurrentEntries/>
+    <WalkIns/> 
     
   </React.StrictMode>,
   document.getElementById('root')
