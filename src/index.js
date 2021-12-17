@@ -1,23 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Dashboard from './Dashboard/Dashboard';
 import './index.css';
-import Payment from './components/Payment';
-import Booking from './components/Booking';
-import App from './components/Registration';
-import VitalSigns from './components/VitalSigns';
-import Consultation from './components/Consultation';
-import Admission from './components/Admission';
-import DispenseDrugs from './components/DispenseDrugs';
-import Emergency from './components/EmergencyICU';
-import Diagnostics from './components/Diagnostics';
-import WalkIns from './components/WalkIn';
+// import Payment from './components/Payment';
+// import Booking from './components/Booking';
+// import App from './components/Registration';
+// import VitalSigns from './components/VitalSigns';
+// import Consultation from './components/Consultation';
+// import Admission from './components/Admission';
+// import DispenseDrugs from './components/DispenseDrugs';
+// import Emergency from './components/EmergencyICU';
+// import Diagnostics from './components/Diagnostics';
+// import WalkIns from './components/WalkIn';
 import reportWebVitals from './reportWebVitals';
-import RecurrentEntries from './components/RecurrentEntries';
+// import RecurrentEntries from './components/RecurrentEntries';
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+  
+    {/* <App />
     <Payment/>
     <Booking/>
     <VitalSigns/>
@@ -27,8 +29,10 @@ ReactDOM.render(
     <Emergency/>
     <Diagnostics/>
     <RecurrentEntries/>
-    <WalkIns/> 
+    <WalkIns/>  */}
     
+    <Dashboard/>
+   
   </React.StrictMode>,
   document.getElementById('root')
 );
