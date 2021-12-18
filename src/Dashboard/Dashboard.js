@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import './Dashboard.css'
 import Registration from "../components/Registration"
 import EmergencyICU from '../components/EmergencyICU'
-import {FaCoins, FaCashRegister, FaHospitalUser, FaHandHoldingMedical, FaDiagnoses, FaCapsules, FaUserMd, FaRegCommentAlt, FaFileInvoice,
+import { FaCashRegister, FaHospitalUser, FaHandHoldingMedical, FaDiagnoses, FaCapsules,
     FaBars, FaSearch, FaRegBell
 } from 'react-icons/fa'
 import {BsFillJournalBookmarkFill} from 'react-icons/bs'
@@ -69,27 +69,16 @@ const Dashboard = () => {
             </div>
 
             <div className="profile-card">
-                <div className="profile-img"></div>
                 <div className="profile-info">
                     <h2>BSSHN</h2>
                     <small>Admin Page</small>
                 </div>
-                <div className="profile-action">
-                   
-                        <span className="las la-coins"><FaCoins/></span>
-                        N2300
-                    
-                </div>
+                
 
-                <div className="profile-icons">
-                        <span className="las la-user"><FaUserMd/></span>
-                        <span className="las la-comment-alt"><FaRegCommentAlt/></span>
-                        <span className="las la-file-invoice"><FaFileInvoice/></span>
-                </div>
             </div>
 
             <div className="sidebar-menu">
-                <div className="menu-item">
+                <div className="menu-item" id="Reg">
                         
                         <span className="icon"><FaCashRegister/></span>
                         <span onClick={HandleReg}>Registration</span>
@@ -97,28 +86,28 @@ const Dashboard = () => {
                 </div>
 
 
-                <div className="menu-item">
+                <div className="menu-item" id="Emergency">
                     
                         <span className="icon"><MdOutlineEmergency/></span>
                         <span onClick={()=>setICU(!icu)}>Emergency/ICU</span>
                     
                 </div>
 
-                <div className="menu-item">
+                <div className="menu-item" id="Book">
                     
                         <span className="icon"><BsFillJournalBookmarkFill/></span>
                         <span onClick={()=>setBook(!book)}>Booking</span>
                     
                 </div>
 
-                <div className="menu-item">
+                <div className="menu-item" id="Admit">
                     
                         <span className="icon"><FaHospitalUser/></span>
                         <span onClick={()=>setAdmit(!admit)}>Admission</span>
                     
                 </div>
 
-                <div className="menu-item">
+                <div className="menu-item" id="Consult">
                     
                         <span className="icon"><FaHandHoldingMedical/></span>
                         <span onClick={()=>setConsult(!consult)}>Consultation</span>
@@ -126,35 +115,35 @@ const Dashboard = () => {
                 </div>
 
 
-                <div className="menu-item">
+                <div className="menu-item" id="Diagnose">
                     
                         <span className="icon"><FaDiagnoses/></span>
                         <span onClick={()=>setDiagnose(!diagnose)}>Diagnostics</span>
                     
                 </div>
 
-                <div className="menu-item">
+                <div className="menu-item" id="Drugs">
                     
                         <span className="icon"><FaCapsules/></span>
                         <span onClick={()=>setDrugs(!drugs)}>Drug Dispensation</span>
                     
                 </div>
 
-                <div className="menu-item">
+                <div className="menu-item" id="Pay">
                     
                         <span className="icon"><MdPayment/></span>
                         <span onClick={()=>setPay(!pay)}>Payment</span>
                     
                 </div>
 
-                <div className="menu-item">
+                <div className="menu-item" id="Vitals">
                     
                         <span className="icon"><GiMedicalDrip/></span>
                         <span onClick={()=>setVitals(!vitals)}>Vital Signs</span>
                     
                 </div>
 
-                <div className="menu-item">
+                <div className="menu-item" id="Entries">
                     
                         <span className="icon"><BsJournalMedical/></span>
                         <span onClick={()=>setEntries(!entries)}>Recurrent Entries</span>
@@ -163,11 +152,6 @@ const Dashboard = () => {
 
             </div>
 
-            <div className="sidebar-card">
-                <h2>Hello User</h2>
-                <p>You have several tasks to complete today</p>
-                Get Started
-            </div>
         </div>
         
         <div className="main-content">

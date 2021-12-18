@@ -3,7 +3,7 @@
     --color-secondary: #e4a104;
     --bg-body: #f8f8fb;
     --main-accent: #8492a6;
-    --main-text: #8492a6;
+    --main-text: black;
     --success: #28C745;
     --danger: #c70909;
     --shadow: rgba(224, 208, 208, 0.15) 0px 2px 8px;
@@ -19,7 +19,7 @@
 }
 
 body{
-    color: var(--main-text);
+    /* color: var(--main-text); */
     background: var(--bg-body);
     overflow-x: hidden;
 }
@@ -53,13 +53,14 @@ body{
     width: 93%;
     margin: auto;
     display: flex;
+    
 }
 
 .page-wrapper::before {
     content: "";
     width: 100%;
     max-width: 100%;
-    height: 430px;
+    height: 280px;
     position: absolute;
     left: 0;
     top: 0;
@@ -94,7 +95,7 @@ body{
 
 .profile-card{
     text-align: center;
-    margin: 1rem 0rem;
+    margin: 4rem 0rem;
 }
 
 .profile-img{
@@ -162,41 +163,84 @@ body{
     grid-gap: 2rem;
 }
 
-.menu-item a{
-    display: block;
-    width: 100%;
-    padding: 1rem 0rem;
-    border-radius: 10px;
+.menu-item{
+    border: 3px solid #599691d5;
+    border-radius: 20px;
+    transition: all;
 }
-
-
 .menu-item span{
     display: block;
     text-align: center;
     color: var(--main-text);
     font-size: 1rem;
+    margin: 1rem;
+    
 }
 
-.icon{
+/* .icon{
     margin-top: 2rem;
-}
+} */
 
-.menu-item a span:first-child{
+/* .menu-item a span:first-child{
     font-size: 2rem;
     margin-bottom: .7rem;
-}
+} */
 
-.menu-item a.active{
-    background: #e48365;
-}
 
-.menu-item a.active span{
-    color: rgb(3, 2, 2);
-}
+
 
 .menu-item span:hover{
 color: #599691c5;
     
+}
+
+.menu-item:hover{
+    -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  border: 3px solid #599691d5;
+  border-radius: 40px;
+  
+}
+
+#Reg:hover{
+    background: #54beb69d;
+}
+
+#Emergency:hover{
+    background: #c28d5c54;
+   
+}
+
+#Book:hover{
+    background: #c25c5c54;
+}
+
+#Admit:hover {
+    background: #e4a10444;
+}
+
+#Diagnose:hover{
+    background: #0478e446;
+}
+
+#Drugs:hover{
+    background: #e404bf41;
+}
+
+#Consult:hover{
+    background: #cee40432;
+}
+
+#Entries:hover{
+    background: #e404472d;
+}
+
+#Vitals:hover{
+    background: #04e4e450;
+}
+
+#Pay:hover{
+    background: #e4040432;
 }
 
 .sidebar-card{
@@ -280,7 +324,7 @@ header label {
 }
 .analytics {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 2fr 1fr;
     grid-gap: 1rem;
     margin-top: 2rem;
 
@@ -328,6 +372,7 @@ header label {
     grid-template-columns: repeat(2, 1fr); */
     /* grid-gap: 1rem; */
     padding-bottom: 2rem;
+    height: auto;
 }
 
 .bg-success {
@@ -393,12 +438,12 @@ table p {
 }
 
 
-.grid-2{
+/* .grid-2{
     margin-top: 3.5rem;
     display: grid;
     grid-template-columns: 65% auto;
     grid-gap:2rem
-}
+} */
 
 
 .team-info {
@@ -461,13 +506,31 @@ table p {
     }
 
     .analytics, .grid-2 {
-        grid-template-columns: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
 
     } 
 }
 
 @media only screen and (max-width: 640px) {
+    .page-wrapper{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
     .page-wrapper::before {
+        display: grid;
+        grid-template-columns: 1fr;
         min-width: 600px;
+    }
+    .card-head{
+        display: grid;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .emails-info{
+        display: grid;
+        grid-column-start: 1;
+        grid-column-end: 3;
     }
 }
